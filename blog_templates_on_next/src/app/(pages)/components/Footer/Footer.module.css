@@ -1,0 +1,74 @@
+/* Подвал: единые цвета и отступы */
+.footerWrapper {
+    background-color: var(--surface);
+    border-top: 1px solid var(--border);
+    padding-block: var(--space-4);
+    margin-top: var(--space-4);
+}
+
+.footerContent {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: var(--page-x);
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+/* Колонки */
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+    text-align: left;
+}
+.column {
+    flex: 1 1 220px;
+}
+.column h4 {
+    margin: 0 0 var(--space-1);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+}
+.column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.column li {
+    margin-bottom: var(--space-1);
+}
+.column a {
+    color: var(--text);
+    padding: 2px 4px;
+    border-radius: 6px;
+    transition: color 0.15s ease, background-color 0.15s ease;
+}
+.column a:hover {
+    color: var(--brand);
+    background: var(--surface-2);
+}
+.column a:focus-visible {
+    outline: 2px solid rgba(91, 33, 182, 0.35);
+    outline-offset: 2px;
+}
+.column p {
+    margin: 4px 0;
+}
+
+/* Копирайт */
+.copyright {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+/* Адаптивный футер */
+@media (max-width: 768px) {
+    .columns {
+        flex-direction: column;
+        gap: var(--space-2);
+    }
+}

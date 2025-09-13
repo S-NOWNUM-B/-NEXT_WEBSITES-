@@ -1,0 +1,80 @@
+/* Шапка: используем переменные из global.css, убираем подчёркивания */
+.headerWrapper {
+    background-color: var(--surface);
+    padding-block: var(--space-2);
+    border-bottom: 1px solid var(--border);
+}
+
+.headerContent {
+    max-width: 1200px;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: var(--space-2);
+    padding-inline: var(--page-x);
+}
+
+/* Логотип */
+.logoSection {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text);
+    justify-self: start;
+}
+
+/* Навигация */
+.navLinks {
+    display: flex;
+    gap: var(--space-3);
+    font-size: 0.95rem;
+    font-weight: 600;
+    justify-self: center;
+}
+.navLinks a {
+    color: var(--text);
+    padding: 6px 8px;
+    border-radius: 8px;
+    transition: color 0.15s ease, background-color 0.15s ease;
+}
+.navLinks a:hover {
+    color: var(--brand);
+    background: var(--surface-2);
+}
+.navLinks a:focus-visible {
+    outline: 2px solid rgba(91, 33, 182, 0.35);
+    outline-offset: 2px;
+}
+
+/* Профиль */
+.profileLink {
+    justify-self: end;
+}
+.profileLink a {
+    color: var(--text);
+    font-weight: 600;
+    padding: 6px 8px;
+    border-radius: 8px;
+    transition: color 0.15s ease, background-color 0.15s ease;
+}
+.profileLink a:hover {
+    color: var(--brand);
+    background: var(--surface-2);
+}
+.profileLink a:focus-visible {
+    outline: 2px solid rgba(91, 33, 182, 0.35);
+    outline-offset: 2px;
+}
+
+/* Мобильный: скрываем меню */
+@media (max-width: 720px) {
+    .headerContent {
+        grid-template-columns: 1fr auto;
+    }
+    .navLinks {
+        display: none;
+    }
+}

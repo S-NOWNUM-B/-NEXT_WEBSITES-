@@ -1,0 +1,69 @@
+/* Главная: подсказки, строка параметров быстрой задачи и мини-действия */
+
+.hint{
+    font-size: 12px;
+    color: var(--muted);
+}
+
+/* строка с датой/приоритетом в «Быстрой задаче» */
+.quick-task-row{
+    display: flex;
+    gap: var(--space-2);
+    margin-top: var(--space-1);
+}
+
+/* блок статистики на главной */
+.stats{
+    display: flex;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+}
+.stat{ min-width: 140px; }
+.stat-label{ font-size: 12px; color: var(--muted); }
+.stat-value{ font-size: 18px; font-weight: 600; }
+
+/* Общий стиль для метаданных (дата изменения, приоритет) */
+.note-meta,
+.task-meta {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: var(--space-1);
+}
+
+/* Карточки превью заметок и задач */
+.note,
+.task {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: var(--space-2);
+    background: var(--surface-2);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+/* Заголовки карточек (название + бейдж даты) */
+.note-header,
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-1);
+}
+
+/* Метаданные — одинаковый стиль для заметок и задач */
+.note-meta,
+.task-meta {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: var(--space-1);
+}
+
+/* Действия (чекбоксы и кнопки) одинаково выравниваем */
+.note-actions-home,
+.task-actions-home {
+    margin-top: var(--space-1);
+    display: flex;
+    gap: var(--space-2);
+    align-items: center;
+}

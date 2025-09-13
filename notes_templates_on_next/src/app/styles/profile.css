@@ -1,0 +1,65 @@
+/* ширина карточек как на других страницах */
+main > .card {
+    width: 100%;
+    max-width: 1000px;
+    margin-inline: auto;
+}
+
+/* сетка профиля */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: var(--space-3);
+    align-items: start;
+}
+
+.avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--surface-2);
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--text);
+}
+
+.profile-fields {
+    display: grid;
+    gap: var(--space-2);
+}
+
+.field { display: grid; gap: 6px; }
+.label { font-size: 12px; color: var(--muted); }
+
+/* действия под формой */
+.profile-actions {
+    display: flex;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+    margin-top: var(--space-1);
+}
+
+/* статистика (используем уже существующие в проекте классы) */
+.stats {
+    display: flex;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+}
+.stat { min-width: 140px; }
+.stat-label { font-size: 12px; color: var(--muted); }
+.stat-value { font-size: 18px; font-weight: 600; }
+
+/* адаптив */
+@media (max-width: 640px) {
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+    .avatar {
+        width: 72px;
+        height: 72px;
+        font-size: 22px;
+    }
+}

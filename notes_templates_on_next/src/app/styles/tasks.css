@@ -1,0 +1,65 @@
+/* Ширина карточек как на главной */
+main > .card{
+    width: 100%;
+    max-width: 1000px;
+    margin-inline: auto;
+}
+
+/* Toolbar */
+.toolbar{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    align-items: center;
+    justify-content: space-between;
+}
+.toolbar-left,
+.toolbar-right{
+    display: flex;
+    gap: var(--space-2);
+    align-items: center;
+}
+
+/* Форма добавления */
+.add-task{ display: grid; gap: var(--space-2); }
+.add-task-row{ display: flex; gap: var(--space-2); }
+
+/* Список задач */
+.tasks-list{ display: grid; gap: var(--space-2); }
+.task-row{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--space-2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: var(--space-2);
+    background: var(--surface-2);
+}
+.task-row.is-done{ opacity: .75; }
+.task-main{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-2);
+    align-items: start;
+}
+.task-texts{ display: grid; gap: 6px; }
+.task-title{ font-weight: 600; }
+.task-description{ white-space: pre-wrap; }
+.task-meta{ font-size: 12px; }
+.task-actions{
+    display: flex;
+    gap: var(--space-2);
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+/* Редактирование */
+.edit-fields{ display: grid; gap: var(--space-2); }
+.edit-row{ display: flex; gap: var(--space-2); }
+
+/* адаптив */
+@media (max-width: 640px){
+    .task-row{ grid-template-columns: 1fr; }
+    .task-actions{ justify-content: flex-end; }
+    main > .card{ max-width: 100%; }
+}
