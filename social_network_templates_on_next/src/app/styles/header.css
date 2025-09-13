@@ -1,0 +1,123 @@
+/* Header Styles */
+.header-wrapper {
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: #1f2937;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.logo-icon {
+    width: 2rem;
+    height: 2rem;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    color: white;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.875rem;
+}
+
+.logo-text {
+    color: #1f2937;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #6b7280;
+    font-weight: 500;
+    transition: color 0.2s;
+    padding: 0.5rem 0;
+}
+
+.nav-links a:hover {
+    color: #3b82f6;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background: #f9fafb;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.profile-info:hover {
+    background: #f3f4f6;
+}
+
+.avatar {
+    border-radius: 50%;
+    border: 2px solid #e5e7eb;
+}
+
+.profile-info span {
+    color: #374151;
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        padding: 0 0.75rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .nav-links a {
+        font-size: 0.875rem;
+    }
+    
+    .profile-info span {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .logo-text {
+        display: none;
+    }
+    
+    .nav-links {
+        gap: 0.75rem;
+    }
+}

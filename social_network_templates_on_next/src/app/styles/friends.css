@@ -1,0 +1,149 @@
+/* Friends Page Styles */
+.friends-container {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.friends-title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: #111827;
+    margin-bottom: 2rem;
+}
+
+.friends-section {
+    margin-bottom: 2rem;
+}
+
+.friends-section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 1rem;
+}
+
+.friends-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .friends-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .friends-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.friends-card {
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    padding: 1rem;
+}
+
+.friends-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.friends-avatar {
+    border-radius: 50%;
+    margin-bottom: 0.75rem;
+}
+
+.friends-name {
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.25rem;
+}
+
+.friends-username {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.friends-followers {
+    color: #6b7280;
+    font-size: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.friends-actions {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.friends-btn-primary {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    background: #2563eb;
+    color: white;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.friends-btn-primary:hover {
+    background: #1d4ed8;
+}
+
+.friends-btn-secondary {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    background: #e5e7eb;
+    color: #374151;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.friends-btn-secondary:hover {
+    background: #d1d5db;
+}
+
+.friends-btn-icon {
+    padding: 0.5rem 0.75rem;
+    background: #e5e7eb;
+    color: #374151;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.friends-btn-icon:hover {
+    background: #d1d5db;
+}
+
+.friends-btn-full {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background: #2563eb;
+    color: white;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.friends-btn-full:hover {
+    background: #1d4ed8;
+}
